@@ -1,31 +1,50 @@
-import { StyleSheet } from 'react-native';
+import {
+  StatusBar,
+  StyleSheet,
+  SafeAreaView,
+  View,
+  Text,
+  Platform,
+} from 'react-native';
+import { StatusBar as ExposStatusBar } from 'expo-status-bar';
+import React from 'react';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+console.log(StatusBar.currentHeight);
 
-export default function TabOneScreen() {
+export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    <>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.header}>
+          <Text>One</Text>
+        </View>
+        <View style={styles.body}>
+          <Text>Two</Text>
+        </View>
+      </SafeAreaView>
+      <ExposStatusBar style='auto' />
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: StatusBar.currentHeight,
   },
-  title: {
+  header: {
+    padding: 16,
     fontSize: 20,
     fontWeight: 'bold',
+    color: 'black',
+    backgroundColor: 'white',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  body: {
+    flex: 1,
+    padding: 16,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'black',
+    backgroundColor: 'green',
   },
 });

@@ -1,3 +1,5 @@
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+
 const tintColorLight = '#2f95dc';
 const tintColorDark = '#fff';
 

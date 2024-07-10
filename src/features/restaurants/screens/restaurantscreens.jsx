@@ -10,19 +10,19 @@ const SafeArea = styled(SafeAreaView)`
   margin-top: ${StatusBar.currentHeight}px;
 `;
 const SearchContainer = styled.View`
-  padding: 16px;
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  background-color: white;
+  padding: ${(props) => props.theme.space[3]};
+  font-size: ${(props) => props.theme.sizes[2]};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  color: ${(props) => props.theme.colors.text.primary};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;
 const RestaurantListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  background-color: green;
+  padding: ${(props) => props.theme.space[3]};
+  font-size: ${(props) => props.theme.fontSizes.body};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  color: ${(props) => props.theme.colors.text.primary};
+  background-color: ${(props) => props.theme.colors.bg.secondary};
 `;
 
 export const RestaurantsScreen = () => {

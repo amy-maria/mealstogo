@@ -1,5 +1,5 @@
 import React from 'react';
-import { RestaurantsScreen } from '@features/restaurants/screens/restaurantscreens.jsx';
+import { RestaurantsScreen } from '../../src/features/restaurants/screens/restaurantscreens';
 import { ThemeProvider } from 'styled-components/native';
 import { theme } from '../../src/infrastructure/theme';
 import {
